@@ -9,7 +9,7 @@ read -p "Enter a number : " second
 sum=$(($first + $second))
 echo "sum of the numbers : $sum"
 
-<< commentes
+<< EOF
 let "sub = $first - $second"
 let "mul = $first * $second"
 let "div = $first / $second"
@@ -18,4 +18,4 @@ echo "Sum of the numbers = $sum"
 echo "Subtraction of the numbers = $sub"
 echo "Multiplication of the numbers = $mul"
 echo "Division of the numbers = $div"
-commentes
+EOF
