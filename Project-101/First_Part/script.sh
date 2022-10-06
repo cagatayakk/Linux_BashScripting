@@ -2,7 +2,7 @@
 
 while true
 do
-  read -p 'Please write your file location: ' FILE 
+  read -p 'Please write your filename: ' FILE 
   if [[ $FILE == '' ]]
   then
     echo "Please give a file"
