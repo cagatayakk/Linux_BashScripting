@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/ bin/bash
+
 echo "hello"
 # date
 pwd # This is an inline comment
