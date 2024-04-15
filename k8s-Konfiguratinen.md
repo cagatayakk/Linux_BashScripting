@@ -6,7 +6,7 @@ export KUBECONFIG=~/.kube/config
 alias k="kubectl"
 source <(kubectl completion bash)
 source <(helm completion bash)
-complete -o default -F __start_kubectl k  # use only k instead of kubectl
+complete -o default -F __start_kubectl k  # this command to use only k instead of kubectl
 
 # Ende k8s settings
 ```
