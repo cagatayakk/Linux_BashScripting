@@ -2,7 +2,7 @@
 ```
 # k8s settings
 
-export KUBECONFIG=~/.kube/evbc.config:~/.kube/k3s.config
+export KUBECONFIG=~/.kube/config
 alias k="kubectl"
 source <(kubectl completion bash)
 source <(helm completion bash)
@@ -15,6 +15,8 @@ complete -o default -F __start_kubectl k  # use only k instead of kubectl
 ## install kubectl
 ```
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x ./kubectl
+mv ./kubectl /usr/local/bin/kubectl
 ```
 
 ## install helm
@@ -34,6 +36,6 @@ sudo cat /etc/rancher/k3s/k3s.yaml   # check the config file
 ```
 mkdir ~/.kube
 sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
-Sudo chmod cagatay:cagatay ~/.kube/config
+sudo chmod cagatay:cagatay ~/.kube/config   # change the username
 export KUBECONFIG=~/.kube/config
 ```
