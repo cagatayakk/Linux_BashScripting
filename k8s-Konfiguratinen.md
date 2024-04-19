@@ -4,6 +4,7 @@
 
 export KUBECONFIG=~/.kube/config
 alias k="kubectl"
+alias helm="helm --kubeconfig ~/.kube/config"
 source <(kubectl completion bash)
 source <(helm completion bash)
 complete -o default -F __start_kubectl k  # this command to use only k instead of kubectl
@@ -37,5 +38,6 @@ sudo cat /etc/rancher/k3s/k3s.yaml   # check the config file
 mkdir ~/.kube
 sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
 sudo chmod cagatay:cagatay ~/.kube/config   # change the username
+chmod 600 ~/.kube/config
 export KUBECONFIG=~/.kube/config
 ```
