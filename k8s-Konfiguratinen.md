@@ -37,7 +37,7 @@ sudo cat /etc/rancher/k3s/k3s.yaml   # check the config file
 ```
 mkdir ~/.kube
 sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
-sudo chmod cagatay:cagatay ~/.kube/config   # change the username
+sudo chown cagatay:cagatay ~/.kube/config   # change the username
 chmod 600 ~/.kube/config
 export KUBECONFIG=~/.kube/config
 ```
