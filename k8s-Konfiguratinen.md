@@ -33,6 +33,11 @@ curl -sfL https://get.k3s.io | sh -
 sudo cat /etc/rancher/k3s/k3s.yaml   # check the config file
 ```
 
+## uninstall k3s
+```
+/usr/local/bin/k3s-uninstall.sh
+```
+
 ## k3s Konfigürasyon
 ```
 mkdir ~/.kube
