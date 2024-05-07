@@ -1,4 +1,4 @@
-## Configuration to be added to the bashrc file
+## Configuration to be added to the .bashrc file
 ```
 # k8s settings
 
