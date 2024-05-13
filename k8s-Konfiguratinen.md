@@ -32,6 +32,10 @@ chmod 700 get_helm.sh
 curl -sfL https://get.k3s.io | sh - 
 sudo cat /etc/rancher/k3s/k3s.yaml   # check the config file
 ```
+#### install k3s with specific version
+```
+curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.28.1+k3s1 sh -
+```
 
 ## uninstall k3s
 ```
