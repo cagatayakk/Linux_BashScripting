@@ -1,5 +1,7 @@
 # Install Longhorn on K3S
 
+[link](https://medium.com/@stevenhoang/step-by-step-guide-hosting-longhorn-on-k3s-arm-2328283d7244)
+
 ## 1- Create Namespace
 
 ```
