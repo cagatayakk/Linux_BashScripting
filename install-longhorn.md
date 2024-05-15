@@ -1,4 +1,4 @@
-# install Longhorn on K3S
+# Install Longhorn on K3S
 
 ## 1- Create Namespace
 
