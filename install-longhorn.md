@@ -1,12 +1,12 @@
-# install longhorn
+# install Longhorn on K3S
 
-### Create Namespace
+## 1- Create Namespace
 
 ```
 kubectl create ns longhorn-system
 ```
 
-## 1- Installing open-iscsi
+## 2- Installing open-iscsi
 The open-iscsi package is a prerequisite for Longhorn to create distributed volumes that can be shared across nodes. Ensure that this driver is installed on all worker nodes within your cluster.
 
 ```
@@ -18,7 +18,7 @@ After deploying the iSCSI driver, confirm the status of the installer pods using
 kubectl get pod -n longhorn-system | grep longhorn-iscsi-installation
 ```
 
-## 2- Installing NFSv4 client
+## 3- Installing NFSv4 client
 To enable Longhorn’s backup functionality and ensure proper operation, the NFSv4 client must be installed on the worker nodes within your cluster.
 
 ```
@@ -31,7 +31,7 @@ After deploying the NFSv4 client, confirm the status of the installer pods using
 kubectl get pod -n longhorn-system | grep longhorn-nfs-installation 
 ```
 
-## 3- Installing Longhorn
+## 4- Installing Longhorn
 
 Preparing the configuration value.yaml file:
 ```
@@ -51,12 +51,12 @@ helm repo update
 helm install longhorn longhorn/longhorn -f value.yaml -n longhorn-system
 ```
 
-## Let's make the service type NodePort to access the UI.
+## 5- Let's make the service type NodePort to access the UI.
 ```
 kubectl patch svc longhorn-frontend -n longhorn-system -p '{"spec": {"type": "NodePort"}}'
 ```
 
-## Port-Forward for Longhorn UI
+## 6- Port-Forward for Longhorn UI
 ```
 kubectl port-forward -n longhorn-system service/longhorn-frontend 8080:80
 ```
