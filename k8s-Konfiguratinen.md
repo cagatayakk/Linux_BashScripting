@@ -46,7 +46,7 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.28.1+k3s1 sh -
 ```
 mkdir ~/.kube
 sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
-sudo chown $(id -u):$(id -u) ~/.kube/config   # change the username
+sudo chown $(id -u):$(id -g) ~/.kube/config   # change the username
 chmod 600 ~/.kube/config
 export KUBECONFIG=~/.kube/config
 ```
