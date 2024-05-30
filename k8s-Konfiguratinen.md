@@ -2,7 +2,7 @@
 ```
 # k8s settings
 
-export KUBECONFIG=~/.kube/config
+export KUBECONFIG=~/.kube/k3s.config
 alias k="kubectl"
 alias helm="helm --kubeconfig ~/.kube/config"
 source <(kubectl completion bash)
@@ -45,8 +45,8 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=v1.28.1+k3s1 sh -
 ## k3s Konfigürasyon
 ```
 mkdir ~/.kube
-sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
-sudo chown $(id -u):$(id -g) ~/.kube/config   # change the username
-chmod 600 ~/.kube/config
-export KUBECONFIG=~/.kube/config
+sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/k3s.config
+sudo chown $(id -u):$(id -g) ~/.kube/k3s.config 
+chmod 600 ~/.kube/k3s.config
+export KUBECONFIG=~/.kube/k3s.config
 ```
